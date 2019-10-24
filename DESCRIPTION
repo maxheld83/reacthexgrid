@@ -1,0 +1,27 @@
+Package: reacthexgrid
+Title: htmlwidget for the react hexgrid project
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Maximilian",
+           family = "Held",
+           role = c("aut", "cre"),
+           email = "info@maxheld.de",
+           comment = c(ORCID = "0000-0002-4703-5388"))
+Description: Programmatically write interactive hexagonal grids from R.
+License: MIT + file LICENSE
+URL: https://github.com/maxheld83/reacthexgrid
+BugReports: https://github.com/maxheld83/reacthexgrid
+Encoding: UTF-8
+Language: en
+LazyData: true
+Imports: 
+    htmlwidgets (>= 1.5.1)
+Suggests:
+    pkgdown (>= 1.4.1),
+    testthat (>= 2.1.0),
+    knitr (>= 1.25),
+    covr (>= 3.3.1),
+    rcmdcheck (>= 1.3.3),
+    roxygen2 (>= 6.1.1)
+VignetteBuilder:
+    knitr
