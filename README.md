@@ -1,7 +1,7 @@
 # reacthexgrid
 
 <!-- badges: start -->
-[![Actions Status](https://github.com/maxheld83/reacthexgrid/workflows/.github/workflows/main.yml/badge.svg)](https://github.com/maxheld83/reacthexgrid/actions)
+[![Actions Status](https://github.com/maxheld83/reacthexgrid/workflows/CICD/badge.svg)](https://github.com/maxheld83/reacthexgrid/actions)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/ghactions)](https://cran.r-project.org/package=ghactions)
 [![License: MIT](https://img.shields.io/github/license/r-lib/ghactions.svg?style=flat)](https://opensource.org/licenses/MIT)
