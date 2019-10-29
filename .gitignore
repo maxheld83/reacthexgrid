@@ -4,3 +4,5 @@
 .Ruserdata
 docs/
 node_modules
+inst/htmlwidgets/reacthexgrid.js
+inst/htmlwidgets/reacthexgrid.js.map

@@ -22,11 +22,14 @@ jobs:
             sudo apt-get install -y \
             nodejs
             sudo npm install -g yarn
-            yarn install
       - name: Install Package Dependencies
         run: |-
           Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
           Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+      - name: Install Node Project Dependencies
+        run: |-
+             yarn install
+             yarn run webpack --mode=development
       - name: Check Package
         run: Rscript -e "rcmdcheck::rcmdcheck(error_on = 'error', check_dir = 'check')"
       - name: Run Code Coverage
