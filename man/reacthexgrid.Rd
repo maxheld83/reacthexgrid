@@ -6,6 +6,21 @@
 \usage{
 reacthexgrid(message, width = NULL, height = NULL, elementId = NULL)
 }
+\arguments{
+\item{message}{Sample message for the react component to show}
+
+\item{width}{Fixed width for widget (in css units). The default is
+\code{NULL}, which results in intelligent automatic sizing based on the
+widget's container.}
+
+\item{height}{Fixed height for widget (in css units). The default is
+\code{NULL}, which results in intelligent automatic sizing based on the
+widget's container.}
+
+\item{elementId}{Use an explicit element ID for the widget (rather than an
+automatically generated one). Useful if you have other JavaScript that
+needs to explicitly discover and interact with a specific widget instance.}
+}
 \description{
 <Add Description>
 }

@@ -11,10 +11,18 @@ reacthexgridOutput(outputId, width = "100\%", height = "400px")
 
 renderReacthexgrid(expr, env = parent.frame(), quoted = FALSE)
 
-reacthexgrid_html(id, style, class, ...)
+reacthexgrid_html(id, style, class)
 }
 \arguments{
 \item{outputId}{output variable to read from}
+
+\item{width}{Must be a valid CSS unit (like \code{"100\%"},
+\code{"400px"}, \code{"auto"}) or a number, which will be coerced to a
+string and have \code{"px"} appended.}
+
+\item{height}{Must be a valid CSS unit (like \code{"100\%"},
+\code{"400px"}, \code{"auto"}) or a number, which will be coerced to a
+string and have \code{"px"} appended.}
 
 \item{expr}{An expression that generates a reacthexgrid}
 
@@ -22,6 +30,8 @@ reacthexgrid_html(id, style, class, ...)
 
 \item{quoted}{Is \code{expr} a quoted expression (with \code{quote()})? This
 is useful if you want to save an expression in a variable.}
+
+\item{id, style, class}{attributes of the widget's root element}
 }
 \description{
 Output and render functions for using reacthexgrid within Shiny

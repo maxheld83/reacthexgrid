@@ -4,6 +4,10 @@
 #'
 #' @import htmlwidgets
 #'
+#' @param message Sample message for the react component to show
+#'
+#' @inheritParams htmlwidgets::createWidget
+#'
 #' @export
 reacthexgrid <- function(message, width = NULL, height = NULL, elementId = NULL) {
 
@@ -26,10 +30,7 @@ reacthexgrid <- function(message, width = NULL, height = NULL, elementId = NULL)
 #' Output and render functions for using reacthexgrid within Shiny
 #' applications and interactive Rmd documents.
 #'
-#' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit (like \code{'100\%%'},
-#'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
-#'   string and have \code{'px'} appended.
+#' @inheritParams htmlwidgets::shinyWidgetOutput
 #' @param expr An expression that generates a reacthexgrid
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
@@ -51,7 +52,8 @@ renderReacthexgrid <- function(expr, env = parent.frame(), quoted = FALSE) {
 
 #' Called by HTMLWidgets to produce the widget's root element.
 #' @rdname reacthexgrid-shiny
-reacthexgrid_html <- function(id, style, class, ...) {
+#' @param id,style,class attributes of the widget's root element
+reacthexgrid_html <- function(id, style, class) {
   htmltools::tagList(
     # Necessary for RStudio viewer version < 1.2
     reactR::html_dependency_corejs(),
