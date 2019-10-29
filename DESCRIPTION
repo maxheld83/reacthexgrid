@@ -15,7 +15,9 @@ Encoding: UTF-8
 Language: en
 LazyData: true
 Imports: 
-    htmlwidgets (>= 1.5.1)
+    htmlwidgets (>= 1.5.1),
+    htmltools (>= 0.4.0),
+    reactR (>= 0.4.1)
 Suggests:
     pkgdown (>= 1.4.1),
     testthat (>= 2.1.0),
