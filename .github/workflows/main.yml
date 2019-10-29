@@ -20,8 +20,9 @@ jobs:
             libcurl4-openssl-dev
             curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
             sudo apt-get install -y \
-            nodejs \
-            yarn
+            nodejs
+            sudo apt remove cmdtest
+            sudo npm install -g yarn
             pwd
             ls
             yarn install --verbose
