@@ -18,7 +18,7 @@ jobs:
             libxml2-dev \
             libssl-dev \
             libcurl4-openssl-dev
-            npm -v
+            node -v
       - name: Install Package Dependencies
         run: |-
           Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
