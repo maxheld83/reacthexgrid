@@ -22,9 +22,6 @@ jobs:
             sudo apt-get install -y \
             nodejs \
             yarn
-            nodejs -v
-            npm -v
-            yarn --version
       - name: Install Package Dependencies
         run: |-
           Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
