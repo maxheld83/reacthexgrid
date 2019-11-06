@@ -2,13 +2,11 @@
 % Please edit documentation in R/reacthexgrid.R
 \name{reacthexgrid}
 \alias{reacthexgrid}
-\title{<Add Title>}
+\title{Create hexagon grid}
 \usage{
-reacthexgrid(message, width = NULL, height = NULL, elementId = NULL)
+reacthexgrid(width = NULL, height = NULL, elementId = NULL)
 }
 \arguments{
-\item{message}{Sample message for the react component to show}
-
 \item{width}{Fixed width for widget (in css units). The default is
 \code{NULL}, which results in intelligent automatic sizing based on the
 widget's container.}
@@ -22,5 +20,6 @@ automatically generated one). Useful if you have other JavaScript that
 needs to explicitly discover and interact with a specific widget instance.}
 }
 \description{
-<Add Description>
+Wraps the [react-hexgrid](https://www.npmjs.com/package/react-hexgrid) library.
 }
+\concept{wrappers}

@@ -1,18 +1,29 @@
-#' <Add Title>
+#' Create hexagon grid
 #'
-#' <Add Description>
+#' Wraps the [react-hexgrid](https://www.npmjs.com/package/react-hexgrid) library.
 #'
 #' @import htmlwidgets
 #'
-#' @param message Sample message for the react component to show
-#'
 #' @inheritParams htmlwidgets::createWidget
 #'
+#' @family wrappers
+#'
 #' @export
-reacthexgrid <- function(message, width = NULL, height = NULL, elementId = NULL) {
-
-  # describe a React component to send to the browser for rendering.
-  component <- reactR::reactMarkup(htmltools::tag("div", list(message)))
+reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
+  component <- reactR::reactMarkup(
+    hexgrid(
+      layout(
+        hexagon(q = 0, r = 0, s = 0),
+        hexagon(q = 0, r = -1, s = 1),
+        hexagon(q = 0, r = 1, s = -1),
+        hexagon(q = 1, r = -1, s = 0),
+        hexagon(q = 1, r = 0, s = -1),
+        hexagon(q = -1, r = 1, s = 0),
+        hexagon(q = -1, r = 0, s = 1),
+        hexagon(q = -2, r = 0, s = 1)
+      )
+    )
+  )
 
   # create widget
   htmlwidgets::createWidget(
@@ -23,6 +34,69 @@ reacthexgrid <- function(message, width = NULL, height = NULL, elementId = NULL)
     package = 'reacthexgrid',
     elementId = elementId
   )
+}
+
+
+#' Create Hexagon Component
+#'
+#' @param ... child components
+#'
+#' @param q,r,s `[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
+#'
+#' @family components
+#'
+#' @export
+hexagon <- function(..., q, r, s) {
+  # TODO input validation
+  reactR::React$Hexagon(q = q, r = r, s = s, ...)
+}
+
+#' Create Layout Component
+#'
+#' @param ... child components
+#'
+#' @param size `[list(x = integer(), y = integer())]` giving extent of the grid.
+#'
+#' @param flat `[logical(1)]` giving whether the hexagons should flat (`TRUE`) or pointy-topped (`FALSE`).
+#'
+#' @param spacing `[numeric(1)]` giving the spacing between the hexagons.
+#'
+#' @param origin `[list(x = integer(), y = integer())]` giving the origin of the coordinate system.
+#'
+#' @family components
+#'
+#' @export
+layout <- function(...,
+                   size = list(x = 10, y = 10),
+                   flat = TRUE,
+                   spacing = 1.1,
+                   origin = list(x = 0, y = 0)) {
+  # TODO input validation
+  reactR::React$Layout(
+    size = size,
+    flat = flat,
+    spacing = spacing,
+    origin = origin,
+    ...
+  )
+}
+
+#' Create Layout Component
+#'
+#' @param ... child components
+#'
+#' @param width,height `[integer(1)]` giving width and height in pixels.
+#'
+#' @param viewBox `[character(1)]` giving position and dimension of [SVG viewport](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) as four whitespace-separated numbers `"min-x min-y width height"`.
+#'
+#' @family components
+#'
+#' @export
+hexgrid <- function(...,
+                    width = 1200,
+                    height = 800,
+                    viewBox = "-50 -50 100 100") {
+  reactR::React$HexGrid(width = width, height = height, viewBox = viewBox, ...)
 }
 
 #' Shiny bindings for reacthexgrid
@@ -60,7 +134,6 @@ reacthexgrid_html <- function(id, style, class, ...) {
     reactR::html_dependency_corejs(),
     reactR::html_dependency_react(),
     reactR::html_dependency_reacttools(),
-    htmltools::tags$div(id = id, class = class, style = style),
-    ...
+    htmltools::tags$div(id = id, class = class, style = style, ...)
   )
 }
