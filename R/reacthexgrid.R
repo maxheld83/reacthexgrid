@@ -51,14 +51,16 @@ renderReacthexgrid <- function(expr, env = parent.frame(), quoted = FALSE) {
 }
 
 #' Called by HTMLWidgets to produce the widget's root element.
-#' @rdname reacthexgrid-shiny
 #' @param id,style,class attributes of the widget's root element
-reacthexgrid_html <- function(id, style, class) {
+#' @inheritDotParams htmltools::tagList
+#' @rdname reacthexgrid-shiny
+reacthexgrid_html <- function(id, style, class, ...) {
   htmltools::tagList(
     # Necessary for RStudio viewer version < 1.2
     reactR::html_dependency_corejs(),
     reactR::html_dependency_react(),
     reactR::html_dependency_reacttools(),
-    htmltools::tags$div(id = id, class = class, style = style)
+    htmltools::tags$div(id = id, class = class, style = style),
+    ...
   )
 }

@@ -11,7 +11,7 @@ reacthexgridOutput(outputId, width = "100\%", height = "400px")
 
 renderReacthexgrid(expr, env = parent.frame(), quoted = FALSE)
 
-reacthexgrid_html(id, style, class)
+reacthexgrid_html(id, style, class, ...)
 }
 \arguments{
 \item{outputId}{output variable to read from}
@@ -32,6 +32,11 @@ string and have \code{"px"} appended.}
 is useful if you want to save an expression in a variable.}
 
 \item{id, style, class}{attributes of the widget's root element}
+
+\item{...}{Arguments passed on to \code{htmltools::tagList}
+\describe{
+  \item{}{}
+}}
 }
 \description{
 Output and render functions for using reacthexgrid within Shiny
