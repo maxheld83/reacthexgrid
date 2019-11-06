@@ -1,0 +1,6 @@
+system("yarn install")
+system("yarn run webpack --mode=development")
+devtools::document()
+devtools::install(quick = TRUE)
+library(reacthexgrid)
+print(reacthexgrid(message = paste("Hello, it is", Sys.time())))
