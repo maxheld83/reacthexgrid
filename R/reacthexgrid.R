@@ -42,6 +42,7 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
 #' @param ... child components
 #'
 #' @param q,r,s `[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
+#' The axial coordinates are unitless integers; they need not correspond the SVG coordinate system of [Hexagon()].
 #'
 #' @family components
 #'
@@ -55,13 +56,14 @@ hexagon <- function(..., q, r, s) {
 #'
 #' @param ... child components
 #'
-#' @param size `[list(x = integer(), y = integer())]` giving extent of the grid.
+#' @param size `[list(x = integer(), y = integer())]` giving sizes of the individual hexagons, relative to `viewBox` of the [hexgrid()].
 #'
 #' @param flat `[logical(1)]` giving whether the hexagons should flat (`TRUE`) or pointy-topped (`FALSE`).
 #'
-#' @param spacing `[numeric(1)]` giving the spacing between the hexagons.
+#' @param spacing `[numeric(1)]` giving the spacing between the hexagons as a *multiple* of `size` (probably; this is undocumented in the upstream library.)
+#' Must be greater than 1 to avoid overplotting
 #'
-#' @param origin `[list(x = integer(), y = integer())]` giving the origin of the coordinate system.
+#' @param origin `[list(x = integer(), y = integer())]` giving the origin from which to draw the [hexgrid()] given the axial coordinates of [hexagon()]s.
 #'
 #' @family components
 #'
@@ -85,16 +87,16 @@ layout <- function(...,
 #'
 #' @param ... child components
 #'
-#' @param width,height `[integer(1)]` giving width and height in pixels.
+#' @param width,height `[integer(1)]` giving width and height of [outermost svg element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) viewport, expressed in percentage of parent element or CSS length units.
 #'
-#' @param viewBox `[character(1)]` giving position and dimension of [SVG viewport](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) as four whitespace-separated numbers `"min-x min-y width height"`.
+#' @param viewBox `[character(1)]` giving the cartesian dimensions of the [SVG viewport](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox) as four whitespace-separated numbers `"min-x min-y width height"`.
 #'
 #' @family components
 #'
 #' @export
 hexgrid <- function(...,
-                    width = 1200,
-                    height = 800,
+                    width = "100%",
+                    height = "100%",
                     viewBox = "-50 -50 100 100") {
   reactR::React$HexGrid(width = width, height = height, viewBox = viewBox, ...)
 }

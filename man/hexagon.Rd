@@ -9,7 +9,8 @@ hexagon(..., q, r, s)
 \arguments{
 \item{...}{child components}
 
-\item{q, r, s}{`[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).}
+\item{q, r, s}{`[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
+The axial coordinates are unitless integers; they need not correspond the SVG coordinate system of [Hexagon()].}
 }
 \description{
 Create Hexagon Component

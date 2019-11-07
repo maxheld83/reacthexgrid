@@ -10,13 +10,14 @@ layout(..., size = list(x = 10, y = 10), flat = TRUE, spacing = 1.1,
 \arguments{
 \item{...}{child components}
 
-\item{size}{`[list(x = integer(), y = integer())]` giving extent of the grid.}
+\item{size}{`[list(x = integer(), y = integer())]` giving sizes of the individual hexagons, relative to `viewBox` of the [hexgrid()].}
 
 \item{flat}{`[logical(1)]` giving whether the hexagons should flat (`TRUE`) or pointy-topped (`FALSE`).}
 
-\item{spacing}{`[numeric(1)]` giving the spacing between the hexagons.}
+\item{spacing}{`[numeric(1)]` giving the spacing between the hexagons as a *multiple* of `size` (probably; this is undocumented in the upstream library.)
+Must be greater than 1 to avoid overplotting}
 
-\item{origin}{`[list(x = integer(), y = integer())]` giving the origin of the coordinate system.}
+\item{origin}{`[list(x = integer(), y = integer())]` giving the origin from which to draw the [hexgrid()] given the axial coordinates of [hexagon()]s.}
 }
 \description{
 Create Layout Component
