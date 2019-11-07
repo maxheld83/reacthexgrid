@@ -1,0 +1,27 @@
+---
+title: "reacthexgrid"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{reacthexgrid}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(reacthexgrid)
+```
+
+
+## An Example
+
+```{r}
+reacthexgrid()
+```
+
