@@ -2,11 +2,21 @@ Package: reacthexgrid
 Title: htmlwidget for the react hexgrid project
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Maximilian",
-           family = "Held",
-           role = c("aut", "cre"),
-           email = "info@maxheld.de",
-           comment = c(ORCID = "0000-0002-4703-5388"))
+    c(
+      person(
+        given = "Max",
+        family = "Held",
+        role = c("aut", "cre"),
+        email = "info@maxheld.de",
+        comment = c(ORCID = "0000-0002-4703-5388")
+      ),
+      person(
+        given = "Verena",
+        family = "Held", 
+        email = "info@verenaheld.in", 
+        role = "ctb"
+      )
+    )
 Description: Programmatically write interactive hexagonal grids from R.
 License: MIT + file LICENSE
 URL: https://github.com/maxheld83/reacthexgrid

@@ -1,1 +1,21 @@
+url: https://www.maxheld.de/reacthexgrid/
+authors:
+  Max Held:
+    href: http://www.maxheld.de
+  Verena Held:
+    href: http://www.verenaheld.in
+development:
+  mode: auto
+  destination: "."
+reference:
+  - title: "Output (htmlwidget)"
+    desc: >
+      Functions set up a react-hexgrid htmlwidget
+    contents:
+      - reacthexgrid
+  - title: "Components"
+    desc: >
+      Functions to write React components from react-hexgrid
+    contents:
+      - has_concept("components")
 destination: docs
