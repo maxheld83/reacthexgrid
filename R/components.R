@@ -89,3 +89,13 @@ text <- function(x = NULL) {
 pattern <- function(..., id, link) {
   reactR::React$Pattern(id = id, link = link, ...)
 }
+
+
+#' Create [Path](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/path) Component
+#'
+#' @param start,end `[numeric(2)]` giving the start and end x,y coordinates in the SVG `viewBox` of [HexGrid()].
+#'
+#' @export
+path <- function(start, end) {
+  reactR::React$Path(start = start, end = end)
+}

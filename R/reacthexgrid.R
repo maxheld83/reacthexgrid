@@ -25,7 +25,11 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
         hexagon(q = 1, r = 0, s = -1),
         hexagon(q = -1, r = 1, s = 0),
         hexagon(q = -1, r = 0, s = 1),
-        hexagon(q = -2, r = 0, s = 1)
+        hexagon(q = -2, r = 0, s = 1),
+        path(
+          start = htmlwidgets::JS("new Hex(0, 0, 0)"),
+          end = htmlwidgets::JS("new Hex(-2, 0, 1)")
+        )
       ),
       pattern(id = "pat-1", link = "http://lorempixel.com/400/400/cats/1/")
     )

@@ -1,4 +1,4 @@
-import { HexGrid, Layout, Hexagon, Text, Pattern } from 'react-hexgrid';
+import { HexGrid, Layout, Hexagon, Text, Pattern, Path, Hex } from 'react-hexgrid';
 import { reactWidget } from 'reactR';
 
 reactWidget('reacthexgrid', 'output', {
@@ -6,5 +6,6 @@ reactWidget('reacthexgrid', 'output', {
   Layout: Layout,
   Hexagon: Hexagon,
   Text: Text,
-  Pattern: Pattern
+  Pattern: Pattern,
+  Path: Path
 });
