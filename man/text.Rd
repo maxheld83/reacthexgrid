@@ -14,6 +14,7 @@ Create Text Component
 }
 \seealso{
 Other components: \code{\link{hexagon}},
-  \code{\link{hexgrid}}, \code{\link{layout}}
+  \code{\link{hexgrid}}, \code{\link{layout}},
+  \code{\link{pattern}}
 }
 \concept{components}

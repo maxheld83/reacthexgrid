@@ -14,7 +14,7 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
     hexgrid(
       layout(
         hexagon(q = 0, r = 0, s = 0),
-        hexagon(q = 0, r = -1, s = 1),
+        hexagon(q = 0, r = -1, s = 1, fill = "pat-1"),
         hexagon(q = 0, r = 1, s = -1),
         hexagon(
           text(x = "1, -1, 0"),
@@ -26,7 +26,8 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
         hexagon(q = -1, r = 1, s = 0),
         hexagon(q = -1, r = 0, s = 1),
         hexagon(q = -2, r = 0, s = 1)
-      )
+      ),
+      pattern(id = "pat-1", link = "http://lorempixel.com/400/400/cats/1/")
     )
   )
 

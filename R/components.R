@@ -2,15 +2,17 @@
 #'
 #' @param ... child components
 #'
-#' @param q,r,s `[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
+#' @param q,r,s `[integer(1)]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
 #' The axial coordinates are unitless integers; they need not correspond the SVG coordinate system of [Hexagon()].
+#'
+#' @param fill `[character(1)]` giving the [fill](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill) attribute.
 #'
 #' @family components
 #'
 #' @export
-hexagon <- function(..., q, r, s) {
+hexagon <- function(..., q, r, s, fill = NULL) {
   # TODO input validation
-  reactR::React$Hexagon(q = q, r = r, s = s, ...)
+  reactR::React$Hexagon(q = q, r = r, s = s, fill = fill, ...)
 }
 
 #' Create Layout Component
@@ -71,4 +73,19 @@ hexgrid <- function(...,
 #' @export
 text <- function(x = NULL) {
   reactR::React$Text(x)
+}
+
+#' Create [Pattern](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/pattern) Component
+#'
+#' @param ... child components
+#'
+#' @param id `[character(1)]`
+#'
+#' @param link `[character(1)]`
+#'
+#' @family components
+#'
+#' @export
+pattern <- function(..., id, link) {
+  reactR::React$Pattern(id = id, link = link, ...)
 }

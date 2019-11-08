@@ -3,6 +3,7 @@
 export(hexagon)
 export(hexgrid)
 export(layout)
+export(pattern)
 export(reacthexgrid)
 export(reacthexgridOutput)
 export(renderReacthexgrid)

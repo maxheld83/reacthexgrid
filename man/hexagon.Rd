@@ -4,19 +4,22 @@
 \alias{hexagon}
 \title{Create Hexagon Component}
 \usage{
-hexagon(..., q, r, s)
+hexagon(..., q, r, s, fill = NULL)
 }
 \arguments{
 \item{...}{child components}
 
-\item{q, r, s}{`[integer()]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
+\item{q, r, s}{`[integer(1)]` giving axial coordinates, see [readblobgames](https://www.redblobgames.com/grids/hexagons/).
 The axial coordinates are unitless integers; they need not correspond the SVG coordinate system of [Hexagon()].}
+
+\item{fill}{`[character(1)]` giving the [fill](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill) attribute.}
 }
 \description{
 Create Hexagon Component
 }
 \seealso{
 Other components: \code{\link{hexgrid}},
-  \code{\link{layout}}, \code{\link{text}}
+  \code{\link{layout}}, \code{\link{pattern}},
+  \code{\link{text}}
 }
 \concept{components}
