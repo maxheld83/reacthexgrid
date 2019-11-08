@@ -1,8 +1,9 @@
-import { HexGrid, Layout, Hexagon } from 'react-hexgrid';
+import { HexGrid, Layout, Hexagon, Text } from 'react-hexgrid';
 import { reactWidget } from 'reactR';
 
 reactWidget('reacthexgrid', 'output', {
   HexGrid: HexGrid,
   Layout: Layout,
-  Hexagon: Hexagon
+  Hexagon: Hexagon,
+  Text: Text
 });

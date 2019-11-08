@@ -24,6 +24,6 @@ Create Layout Component
 }
 \seealso{
 Other components: \code{\link{hexagon}},
-  \code{\link{hexgrid}}
+  \code{\link{hexgrid}}, \code{\link{text}}
 }
 \concept{components}

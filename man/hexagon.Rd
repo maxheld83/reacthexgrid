@@ -17,6 +17,6 @@ Create Hexagon Component
 }
 \seealso{
 Other components: \code{\link{hexgrid}},
-  \code{\link{layout}}
+  \code{\link{layout}}, \code{\link{text}}
 }
 \concept{components}

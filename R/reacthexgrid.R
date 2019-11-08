@@ -16,7 +16,12 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
         hexagon(q = 0, r = 0, s = 0),
         hexagon(q = 0, r = -1, s = 1),
         hexagon(q = 0, r = 1, s = -1),
-        hexagon(q = 1, r = -1, s = 0),
+        hexagon(
+          text(x = "1, -1, 0"),
+          q = 1,
+          r = -1,
+          s = 0
+        ),
         hexagon(q = 1, r = 0, s = -1),
         hexagon(q = -1, r = 1, s = 0),
         hexagon(q = -1, r = 0, s = 1),
@@ -99,6 +104,17 @@ hexgrid <- function(...,
                     height = "100%",
                     viewBox = "-50 -50 100 100") {
   reactR::React$HexGrid(width = width, height = height, viewBox = viewBox, ...)
+}
+
+#' Create Text Component
+#'
+#' @param x `[character(1)]` giving a string to be shown inside the hexagons.
+#'
+#' @family components
+#'
+#' @export
+text <- function(x = NULL) {
+  reactR::React$Text(x)
 }
 
 #' Shiny bindings for reacthexgrid

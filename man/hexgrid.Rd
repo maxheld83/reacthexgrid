@@ -19,6 +19,6 @@ Create Layout Component
 }
 \seealso{
 Other components: \code{\link{hexagon}},
-  \code{\link{layout}}
+  \code{\link{layout}}, \code{\link{text}}
 }
 \concept{components}
