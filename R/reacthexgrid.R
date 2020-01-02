@@ -14,20 +14,46 @@ reacthexgrid <- function(width = NULL, height = NULL, elementId = NULL) {
     hexgrid(
       layout(
         hexagon(q = 0, r = 0, s = 0),
-        hexagon(q = 0, r = -1, s = 1, fill = "pat-1"),
-        hexagon(q = 0, r = 1, s = -1),
-        hexagon(
-          text(x = "1, -1, 0"),
-          q = 1,
-          r = -1,
-          s = 0
-        ),
-        hexagon(q = 1, r = 0, s = -1),
-        hexagon(q = -1, r = 1, s = 0),
-        hexagon(q = -1, r = 0, s = 1),
-        hexagon(q = -2, r = 0, s = 1)
+        hexagon(q = 0, r = -1, s = 1, fill = "pat-1")
+        # hexagon(q = 0, r = 1, s = -1),
+        # hexagon(
+        #   # text(x = "1, -1, 0"),
+        #   q = 1,
+        #   r = -1,
+        #   s = 0
+        # ),
+        # hexagon(q = 1, r = 0, s = -1),
+        # hexagon(q = -1, r = 1, s = 0),
+        # hexagon(q = -1, r = 0, s = 1),
+        # hexagon(q = -2, r = 0, s = 1)
       ),
-      pattern(id = "pat-1", link = "http://lorempixel.com/400/400/cats/1/")
+      # pattern(id = "pat-1", link = "index_files/empl_mistakes.svg")
+      # pattern(id = "pat-1", link = "index_files/cat.jpeg"),
+      htmltools::tag(
+        `_tag_name` = "defs",
+        varArgs = list(
+          htmltools::tag(
+            `_tag_name` = "pattern",
+            varArgs = list(
+              id = "pat-1",
+              patternContentUnits = "objectBoundingBox",
+              width = "100%",
+              height = "100%",
+              # viewBox = "0 0 1 1",
+              # preserveAspectRatio = "xMidYMid slice",
+              htmltools::tag(
+                `_tag_name` = "image",
+                varArgs = list(
+                  `xlink:href` = "index_files/empl_mistakes.svg",
+                  width = "1",
+                  height = "1",
+                  preserveAspectRatio = "none"
+                )
+              )
+            )
+          )
+        )
+      )
     )
   )
 

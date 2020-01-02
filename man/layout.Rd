@@ -4,7 +4,7 @@
 \alias{layout}
 \title{Create Layout Component}
 \usage{
-layout(..., size = list(x = 10, y = 10), flat = TRUE, spacing = 1.1,
+layout(..., size = list(x = 20, y = 20), flat = TRUE, spacing = 1.1,
   origin = list(x = 0, y = 0))
 }
 \arguments{

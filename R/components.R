@@ -32,7 +32,7 @@ hexagon <- function(..., q, r, s, fill = NULL) {
 #'
 #' @export
 layout <- function(...,
-                   size = list(x = 10, y = 10),
+                   size = list(x = 20, y = 20),
                    flat = TRUE,
                    spacing = 1.1,
                    origin = list(x = 0, y = 0)) {
@@ -87,5 +87,14 @@ text <- function(x = NULL) {
 #'
 #' @export
 pattern <- function(..., id, link) {
-  reactR::React$Pattern(id = id, link = link, ...)
+  reactR::React$Pattern(
+    id = id,
+    link = link,
+    size = "20 20",
+    width = 1,
+    height = 1,
+    viewBox = "0 0 1 1",
+    preserveAspectRatio = "meet",
+    ...
+  )
 }
